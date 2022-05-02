@@ -7,13 +7,12 @@ import api from '../../services/api';
 import { FoodInterface } from '../../types/types'
 
 interface FoodProps {
-  key: number
   food: FoodInterface
   handleDelete: (id: number) => void
   handleEditFood: (food: FoodInterface) => void
 }
 
-export default function Food( {key, food, handleDelete, handleEditFood}: FoodProps){
+export default function Food( {food, handleDelete, handleEditFood}: FoodProps){
   const { available } = food
 
   const [isAvailable, setIsAvailable] = useState(available)
